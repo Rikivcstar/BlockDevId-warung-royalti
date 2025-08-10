@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: simple-token-warung-royalti
+            expected-sender: ST65Y199HD06ZNN9SEM3TS3K3XCF3CZ9AHR945BV
+            cost: 21580
+            path: "contracts\\simple-token.clar"
+            anchor-block-only: true
+            clarity-version: 2
+      epoch: "2.4"
